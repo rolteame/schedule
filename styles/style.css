@@ -1,0 +1,92 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #ffccff;
+}
+.clock {
+    background-color: #1a001a;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 80vh;
+}
+.timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+}
+.hours, .minutes, .seconds {
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    margin-left: 20px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.day {
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    margin-left: 20px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer > p {  
+    padding-left: 10px;
+    font-size: 30px;
+}
+.show {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+.time-text {
+    grid-column: 1 / 2;
+    justify-self: center;
+    align-self: center;
+    font-size: 20px;
+}
+.images {
+    grid-column: 2 / 3;
+    
+}
+.images img {
+    max-width: 100%;
+    max-height: 300px;
+    padding-left: 25%;
+}
+.form {
+    grid-column: 3 / 4;
+    justify-self: center;
+    align-self: center
+}
+.form > form {
+    display: block;
+}
+.addbutton {
+    text-align: center;
+    width: 100px;
+    margin-left: 40px;
+    margin-top: 5px;
+}
+.d-none {
+    display: none;
+}
+.d-visible {
+    display: block;
+}
+.see-text {
+    visibility: hidden;
+}

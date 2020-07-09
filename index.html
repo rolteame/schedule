@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Scheduler</title>
+</head>
+<body>
+    <section class="clock">
+        <div class="timer">
+            <div id="hours" class="hours"></div><p>:</p>
+            <div id="minutes" class="minutes"></div><p>:</p>
+            <div id="seconds" class="seconds"></div>
+            <div id="day" class="day"></div>
+            
+        </div>
+        <div id="show" class="show">
+            <div class="time-text" id="time-text">
+                <p id="time-text-head">The time is: </p>
+                <p id="time-alert" class="time-alert"></p>
+            </div>
+            <div id="images" class="images">
+                <img class="default" src="./images/default.jpg" alt="">
+                <img id="breakfast" class="breakfast d-none" src="./images/breakfast.jpg" alt="">
+                <img id="lunch" class="lunch d-none" src="./images/launch.jpeg" alt="">
+                <img id="dinner" class="lunch d-none" src="./images/dinner.jpg" alt="">
+            </div>
+            <div id="form" class="form">
+                <form action="">
+                    <input type="text"> 
+                    <input type="time">                 
+                </form>
+                <button class="addbutton" type="submit">ADD</button>
+            </div>
+        </div>  
+    </section>
+
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
