@@ -16,25 +16,48 @@
             <div id="day" class="day"></div>
             
         </div>
-        <div id="show" class="show">
+        
             <div class="time-text" id="time-text">
-                <p id="time-text-head">The time is: </p>
-                <p id="time-alert" class="time-alert"></p>
+                <p id="time-text-head">The time is: <span id="time-alert" class="text-alert"></span> </p>
             </div>
+            <div id="show" class="show">
             <div id="images" class="images">
-                <img class="default" src="./images/default.jpg" alt="">
-                <img id="breakfast" class="breakfast d-none" src="./images/breakfast.jpg" alt="">
-                <img id="lunch" class="lunch d-none" src="./images/launch.jpeg" alt="">
-                <img id="dinner" class="lunch d-none" src="./images/dinner.jpg" alt="">
+                <img id="default" class="default" src="./images/default.jpg" alt="">
+                <!--<img id="breakfast" class="breakfast" src="./images/breakfast.jpg">-->
             </div>
-            <div id="form" class="form">
-                <form action="">
-                    <input type="text"> 
-                    <input type="time">                 
+            <div  class="form">
+                <form id="form" action="">
+                    <input id="timeToEat" name="number" type="text" placeholder="Enter Time Hours">
+                    <input id="foodToEat" name="foodtype" type="text" placeholder="Enter Food Type">
+                    <select id="foodType" name = "options">
+                        <option>Choose Food Type</option>
+                        <option>Breakfast</option>
+                        <option>Lunch</option>
+                        <option>Dinner</option>
+                    </select>
+                    <div class="buttons">
+                        <button id="submitBtn" class="addbutton" type="submit">ADD FOOD</button>
+                        <button id="clear"class="clear" type="reset">CLEAR LOCAL STORAGE</button>
+                    </div>
                 </form>
-                <button class="addbutton" type="submit">ADD</button>
+                
             </div>
-        </div>  
+            
+        </div>
+        
+            <table id="foodTimeTable" class="time-table">
+                <thead id="tableHeader">
+                    <tr>
+                        <th>TIME TO EAT</th>
+                        <th>FOOD TO EAT</th>
+                        <th>FOOD TYPE</th>                       
+                    </tr>
+                </thead>
+                <tbody id="foodInput">
+                    
+                </tbody>
+            </table> 
+         
     </section>
 
     <script src="./scripts/index.js"></script>
