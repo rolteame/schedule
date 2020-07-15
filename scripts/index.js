@@ -37,13 +37,11 @@ let currentTime = function currentTime() {
         //let breakfastImage = document.getElementById('breakfast');
         
         //console.log(breakfastImage);
-        
-            let newline = '\r\n';
-            
+
             if ((hour === 10) && (hour === 10 && minutes <= 59) && (midDay === "AM")) {
                 showImages.src = "./images/breakfast.jpg";
                 timeText.innerText = ' 10 AM. Go have your Breakfast';   
-            }else if ((hour === 02) && (hour === 02 && minutes <= 59) && (midDay === "PM")){
+            }else if ((hour === 2) && (hour === 2 && minutes <= 59) && (midDay === "PM")){
                 timeText.innerText = ' 2 PM. Go have your Lunch';
                 showImages.src = "./images/lunch.jpeg";
             }else if ((hour === 8) && (hour === 8 && minutes <= 59) && (midDay === "PM")){
@@ -76,31 +74,21 @@ let currentTime = function currentTime() {
             //retrive JSONDATA and send to table
             let data = JSON.parse(localStorage.getItem('myFoodSchedule'));
             //console.log(data);
+            let table = "";
             
-            function table(json) {
-                let cols = Object.keys(json[0]);
-                let headerRow = '';
-                let bodyRows = '';
+            function populateTable() {
+                for(let i = 0; i < data.length; i++) {
+                    let rowData = "<tr><td>" + data[i].timeToEat + "</td><td>" + data[i].foodToEat + "</td><td>" + data[i].foodType + "</td></tr>";
 
-                cols.map(function(col){
-                    headerRow += '<th>' + col + '</th>'
-                });
-
-                json.map(function(row){
-                    bodyRows += '<tr>';
-                        cols.map(function(colName) {
-                            bodyRows += '<td>' + row[colName] + '</td>';
-                        });
-                    bodyRows += '</tr>'
-                });
-                tableHeader = document.getElementById('tableHeader').innerHTML = headerRow;
-                tableBody = document.getElementById('foodInput').innerHTML = bodyRows;
+                    table = rowData;
+                }
+                document.getElementById('foodInput').innerHTML += table;
             }
-            table(data);
-            console.log(table());
+            populateTable();
         }
         let clearLocalStorage = function clearLocalstorage(clear){
             clear.preventDefault();
+            
             alert('Do you want to clear Local Storage');
             localStorage.clear();
         }
