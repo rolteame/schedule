@@ -148,7 +148,7 @@ th, td {
         width: 300px;
     }
 }  
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 480px) {
     .clock {
         margin: 0;
         display: grid;
