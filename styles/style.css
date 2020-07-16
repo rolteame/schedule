@@ -150,13 +150,14 @@ th, td {
 }  
 @media screen and (max-width: 576px) {
     .clock {
+        margin: 0;
         display: grid;
         grid-template-rows: repeat(5, auto);
         
     }
     .timer {
         grid-row: 1 / 2;
-        justify-content: unset;  
+        justify-content: center;  
     }
     .hours, .minutes, .seconds, .day {
         font-size: 30px;
@@ -171,17 +172,34 @@ th, td {
     }
     .time-text {
         grid-row: 2 / 3;
-        text-align: initial;
-        padding-left: 80px;
+        text-align: center;
+
     }
     .show {
         display: flex;
         flex-direction: column-reverse;
+        align-self: center;
+        justify-self: center;
     }
     .form {
         padding-bottom: 10px;
+        align-self: center;
+        justify-self: center;
     }
     .images > img {
         width: 300px;
+    }
+    table {
+        padding: 10px;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .table {
+        padding: 10px;
+    }
+    th, td {
+        border: 2px solid #d9d9d9;
+        padding: 10px;
     }
 } 
